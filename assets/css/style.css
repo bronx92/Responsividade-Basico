@@ -232,6 +232,9 @@ footer .arrow {
 }
 
 @media (max-width: 600px) {
+    main {
+        background-image: url(../images/ms-homepage-mobile.jpeg);
+    }
     footer .buttons--area a {
         margin: 10px 20px;
         width: calc(100vw - 60px);
