@@ -1,4 +1,5 @@
 /* VARIAVEIS */
+
 :root {
     --header-color: #000;
     --h1-color: #393c41;
@@ -9,22 +10,28 @@
     --btn-light-color: #000;
 }
 
+
 /* FONTES */
+
 @font-face {
     font-family: GothamMedium;
     src: url(../fonts/GothamMedium.otf);
 }
+
 @font-face {
     font-family: GothamBook;
     src: url(../fonts/GothamBookRegular.otf);
 }
+
 body {
     font-family: 'GothamMedium', Helvetica, Arial;
     font-size: 14px;
     margin: 0;
 }
 
+
 /* Header */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -35,35 +42,45 @@ header {
     top: 0;
     right: 0;
 }
-header ul, header li {
+
+header ul,
+header li {
     list-style: none;
 }
+
 header .logo {
     width: 120px;
     margin-left: 20px;
 }
-header .middle ul{
+
+header .middle ul {
     display: flex;
 }
+
 header .middle li {
     margin: 0 10px;
 }
+
 header .middle a {
     text-decoration: none;
     color: var(--header-color);
     text-transform: uppercase;
 }
+
 header .rightside ul {
     display: flex;
 }
+
 header .rightside li {
     margin: 0 10px;
 }
+
 header .rightside a {
     text-decoration: none;
     color: var(--header-color);
     text-transform: uppercase;
 }
+
 header .menu--icon {
     height: 18px;
     width: 16px;
@@ -72,10 +89,12 @@ header .menu--icon {
     justify-content: space-around;
     cursor: pointer;
 }
+
 header .menu--icon div {
     height: 2px;
     background-color: var(--header-color);
 }
+
 
 /* MAIN */
 
@@ -85,6 +104,7 @@ main {
     background-position: center;
     height: 100vh;
 }
+
 main .info {
     height: 45vh;
     display: flex;
@@ -92,12 +112,14 @@ main .info {
     align-items: center;
     flex-direction: column;
 }
+
 main h1 {
     margin: 0;
     font-size: 38px;
     font-weight: normal;
     color: var(--h1-color);
 }
+
 main h2 {
     margin: 0;
     font-size: 14px;
@@ -105,9 +127,11 @@ main h2 {
     font-family: "GothamBook", Helvetica, Arial;
     color: var(--h2-color);
 }
+
 main h2 a {
     color: var(--h1-color);
 }
+
 
 /* FOOTER */
 
@@ -117,10 +141,12 @@ footer {
     bottom: 30px;
     right: 0;
 }
+
 footer .buttons--area {
     display: flex;
     justify-content: center;
 }
+
 footer .buttons--area a {
     display: block;
     width: 220px;
@@ -132,40 +158,83 @@ footer .buttons--area a {
     border-radius: 30px;
     margin: 0 10px;
 }
+
 footer .btn--dark {
     background-color: var(--btn-dark-bg);
     color: var(--btn-dark-color);
-}   
+}
+
 footer .btn--light {
     background-color: var(--btn-light-bg);
     color: var(--btn-light-color);
 }
+
 footer .arrow--area {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     height: 30px;
 }
+
 @keyframes arrow {
     0% {
-        margin-top: 0px ;
+        margin-top: 0px;
     }
     25% {
         margin-top: 15px (360deg);
     }
     50% {
-        margin-top: 0px ;
+        margin-top: 0px;
     }
     75% {
         margin-top: 15px;
     }
     100% {
-        margin-top: 0px ;
+        margin-top: 0px;
     }
 }
+
 footer .arrow {
     height: 15px;
     animation: arrow;
     animation-duration: 1.8s;
     animation-iteration-count: infinite;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    header .middle {
+        display: none;
+    }
+    header .rightside li {
+        display: none;
+    }
+    header .rightside li.menu {
+        display: block;
+    }
+}
+
+@media (max-width: 650px) {
+    footer .buttons--area {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .buttons--area a {
+        margin: 10px 20px;
+        width: calc(100vw - 32px);
+        border-radius: 32px;
+    }
+    footer .rightside li.menu {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    footer .buttons--area a {
+        margin: 10px 20px;
+        width: calc(100vw - 60px);
+        border-radius: 32px;
+    }
 }
